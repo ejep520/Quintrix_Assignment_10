@@ -1,5 +1,8 @@
 debug: true
 
+tenth:
+  srvhost: DESKTOP-4NACQ64
+  
 spring:
   application:
     name: LoginService
@@ -15,8 +18,8 @@ spring:
       client:
         registration:
           github:
-            clientId: {{Tenth.ClientId.Secret}}
-            clientSecret: {{Tenth.ClientSecret.Secret}}
+            clientId: ${{secrets.Tenth_ClientId}}
+            clientSecret: ${{secrets.Tenth_ClientSecret}}
   cloud:
     inetutils:
       preferredNetworks: 192.168.1,96.39
@@ -30,6 +33,3 @@ eureka:
     instance:
       hostname: ${tenth.srvhost}
       preferIpAddress: true
-
-tenth:
-  srvhost: DESKTOP-4NACQ64
