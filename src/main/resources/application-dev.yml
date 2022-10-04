@@ -18,8 +18,8 @@ spring:
       client:
         registration:
           github:
-            clientId: ${{secrets.Tenth_ClientId}}
-            clientSecret: ${{secrets.Tenth_ClientSecret}}
+            clientId: 373f1db6b50bff73648a
+            clientSecret: dc935828e3c8be2e6f70949e71327d3e50dcf7e9
   cloud:
     inetutils:
       preferredNetworks: 192.168.1,96.39
