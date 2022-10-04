@@ -3,8 +3,8 @@ package com.quintrix.jepsen.erik.tenth;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -15,8 +15,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 @SpringBootApplication
 @AutoConfiguration
 @EnableWebSecurity
-// @EnableEurekaClient
-@EnableJpaRepositories
+@EnableEurekaClient
 public class TenthApplication {
 
   public static void main(String[] args) {
